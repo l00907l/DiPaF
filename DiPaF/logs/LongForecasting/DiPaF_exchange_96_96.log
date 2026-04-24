@@ -1,0 +1,67 @@
+../tmp
+Args in experiment:
+Namespace(random_seed=2025, is_training=1, model_id='exchange_96_96', model='DiPaF', data='custom', root_path='../dataset/exchange_rate/', data_path='exchange_rate.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', num_features=8, seq_len=96, label_len=0, pred_len=96, head_dropout=0.05, enc_dropout=0.05, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=4, c_out=7, d_model=512, moving_avg=25, distil=True, embed='timeF', activation='gelu', do_predict=False, num_workers=10, itr=1, train_epochs=100, batch_size=128, patience=10, learning_rate=0.01, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=1, use_multi_gpu=False, devices='0,1,2,3', test_flop=False, enc_hidden_dim=256, embed_dim=64, dec_hidden_dim=256, n_clusters=30, dropout=0.05, lambda_ce=0.5, vqvae_ckpt='./ckpt_vqvae/exchange/best_vqvae.pth', hidden_dim=512, ckpt_tag='grid_search_last')
+Use GPU: cuda:1
+>>>>>>>start training : custom/exchange_96_96_DiPaF_P16_S8_ep100_D512_ebtimeF_dtTrue_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 5120
+val 665
+test 1422
+Epoch: 1 cost time: 4.882992744445801
+Epoch: 1, Steps: 40 | Train Loss: 0.1049107 Vali Loss: 0.1520174 Test Loss: 0.0965247
+Validation loss decreased (inf --> 0.152017).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 2 cost time: 2.899648666381836
+Epoch: 2, Steps: 40 | Train Loss: 0.0726792 Vali Loss: 0.1467411 Test Loss: 0.0844660
+Validation loss decreased (0.152017 --> 0.146741).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 3 cost time: 2.9543752670288086
+Epoch: 3, Steps: 40 | Train Loss: 0.0629548 Vali Loss: 0.1380361 Test Loss: 0.0822161
+Validation loss decreased (0.146741 --> 0.138036).  Saving model ...
+Updating learning rate to 0.01
+Epoch: 4 cost time: 2.8827385902404785
+Epoch: 4, Steps: 40 | Train Loss: 0.0622431 Vali Loss: 0.1321700 Test Loss: 0.0816493
+Validation loss decreased (0.138036 --> 0.132170).  Saving model ...
+Updating learning rate to 0.009000000000000001
+Epoch: 5 cost time: 2.87062668800354
+Epoch: 5, Steps: 40 | Train Loss: 0.0610068 Vali Loss: 0.1334736 Test Loss: 0.0835054
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.008100000000000001
+Epoch: 6 cost time: 3.002167224884033
+Epoch: 6, Steps: 40 | Train Loss: 0.0600215 Vali Loss: 0.1469063 Test Loss: 0.0904839
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.007290000000000001
+Epoch: 7 cost time: 3.1664698123931885
+Epoch: 7, Steps: 40 | Train Loss: 0.0617482 Vali Loss: 0.1434855 Test Loss: 0.0843974
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 0.006561
+Epoch: 8 cost time: 2.9084086418151855
+Epoch: 8, Steps: 40 | Train Loss: 0.0608833 Vali Loss: 0.1449613 Test Loss: 0.0848325
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 0.005904900000000001
+Epoch: 9 cost time: 2.8452489376068115
+Epoch: 9, Steps: 40 | Train Loss: 0.0594125 Vali Loss: 0.1416942 Test Loss: 0.0831369
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 0.00531441
+Epoch: 10 cost time: 2.870286703109741
+Epoch: 10, Steps: 40 | Train Loss: 0.0577216 Vali Loss: 0.1457013 Test Loss: 0.0835615
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 0.004782969000000001
+Epoch: 11 cost time: 2.9851412773132324
+Epoch: 11, Steps: 40 | Train Loss: 0.0576743 Vali Loss: 0.1526470 Test Loss: 0.0851913
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 0.004304672100000001
+Epoch: 12 cost time: 2.9347517490386963
+Epoch: 12, Steps: 40 | Train Loss: 0.0568886 Vali Loss: 0.1469889 Test Loss: 0.0875803
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 0.003874204890000001
+Epoch: 13 cost time: 2.992758274078369
+Epoch: 13, Steps: 40 | Train Loss: 0.0558429 Vali Loss: 0.1543434 Test Loss: 0.0887096
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 0.003486784401000001
+Epoch: 14 cost time: 2.8005173206329346
+Epoch: 14, Steps: 40 | Train Loss: 0.0559317 Vali Loss: 0.1409251 Test Loss: 0.0921343
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : custom/exchange_96_96_DiPaF_P16_S8_ep100_D512_ebtimeF_dtTrue_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 1422
+mse:0.0816492885351181, mae:0.2003970444202423, rse:0.2176322042942047

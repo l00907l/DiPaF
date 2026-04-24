@@ -1,0 +1,87 @@
+/data/zll_2024/ts/tmp_patchcf
+Args in experiment:
+Namespace(random_seed=2025, is_training=1, model_id='ETTh1_96_336', model='DiPaF', data='ETTh1', root_path='../dataset/ETT-small', data_path='ETTh1.csv', features='M', target='OT', freq='h', checkpoints='./checkpoints/', num_features=7, seq_len=96, label_len=0, pred_len=336, head_dropout=0.05, enc_dropout=0.05, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=4, c_out=7, d_model=512, moving_avg=25, distil=True, embed='timeF', activation='gelu', do_predict=False, num_workers=10, itr=1, train_epochs=100, batch_size=512, patience=10, learning_rate=0.02, des='test', loss='mse', lradj='type3', pct_start=0.3, use_amp=False, use_gpu=True, gpu=3, use_multi_gpu=False, devices='0,1,2,3', test_flop=False, enc_hidden_dim=512, embed_dim=64, dec_hidden_dim=128, n_clusters=30, dropout=0.05, lambda_ce=0.1, vqvae_ckpt='./ckpt_vqvae/ETTh1/best_vqvae.pth', hidden_dim=256, ckpt_tag='grid_search_last')
+Use GPU: cuda:3
+>>>>>>>start training : ETTh1/ETTh1_96_336_DiPaF_P16_S8_ep100_D512_ebtimeF_dtTrue_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 8209
+val 2545
+test 2545
+Epoch: 1 cost time: 3.5907506942749023
+Epoch: 1, Steps: 16 | Train Loss: 0.6671543 Vali Loss: 1.5319164 Test Loss: 0.6133209
+Validation loss decreased (inf --> 1.531916).  Saving model ...
+Updating learning rate to 0.02
+Epoch: 2 cost time: 2.705569267272949
+Epoch: 2, Steps: 16 | Train Loss: 0.5536173 Vali Loss: 1.3906487 Test Loss: 0.4849319
+Validation loss decreased (1.531916 --> 1.390649).  Saving model ...
+Updating learning rate to 0.02
+Epoch: 3 cost time: 2.9130661487579346
+Epoch: 3, Steps: 16 | Train Loss: 0.4725144 Vali Loss: 1.3516321 Test Loss: 0.4596475
+Validation loss decreased (1.390649 --> 1.351632).  Saving model ...
+Updating learning rate to 0.02
+Epoch: 4 cost time: 2.876551389694214
+Epoch: 4, Steps: 16 | Train Loss: 0.4563432 Vali Loss: 1.3383762 Test Loss: 0.4517295
+Validation loss decreased (1.351632 --> 1.338376).  Saving model ...
+Updating learning rate to 0.018000000000000002
+Epoch: 5 cost time: 2.8959789276123047
+Epoch: 5, Steps: 16 | Train Loss: 0.4501934 Vali Loss: 1.3308524 Test Loss: 0.4459646
+Validation loss decreased (1.338376 --> 1.330852).  Saving model ...
+Updating learning rate to 0.016200000000000003
+Epoch: 6 cost time: 2.876535177230835
+Epoch: 6, Steps: 16 | Train Loss: 0.4466286 Vali Loss: 1.3283256 Test Loss: 0.4375510
+Validation loss decreased (1.330852 --> 1.328326).  Saving model ...
+Updating learning rate to 0.014580000000000003
+Epoch: 7 cost time: 2.8049697875976562
+Epoch: 7, Steps: 16 | Train Loss: 0.4477563 Vali Loss: 1.3131983 Test Loss: 0.4558178
+Validation loss decreased (1.328326 --> 1.313198).  Saving model ...
+Updating learning rate to 0.013122
+Epoch: 8 cost time: 2.834078311920166
+Epoch: 8, Steps: 16 | Train Loss: 0.4426591 Vali Loss: 1.3297261 Test Loss: 0.4343781
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.011809800000000002
+Epoch: 9 cost time: 3.0087099075317383
+Epoch: 9, Steps: 16 | Train Loss: 0.4386003 Vali Loss: 1.3098627 Test Loss: 0.4330076
+Validation loss decreased (1.313198 --> 1.309863).  Saving model ...
+Updating learning rate to 0.01062882
+Epoch: 10 cost time: 2.73012638092041
+Epoch: 10, Steps: 16 | Train Loss: 0.4348959 Vali Loss: 1.3420377 Test Loss: 0.4365476
+EarlyStopping counter: 1 out of 10
+Updating learning rate to 0.009565938000000001
+Epoch: 11 cost time: 2.6971070766448975
+Epoch: 11, Steps: 16 | Train Loss: 0.4317630 Vali Loss: 1.3440492 Test Loss: 0.4655395
+EarlyStopping counter: 2 out of 10
+Updating learning rate to 0.008609344200000002
+Epoch: 12 cost time: 2.7726402282714844
+Epoch: 12, Steps: 16 | Train Loss: 0.4293221 Vali Loss: 1.3420208 Test Loss: 0.4390565
+EarlyStopping counter: 3 out of 10
+Updating learning rate to 0.007748409780000002
+Epoch: 13 cost time: 2.7353079319000244
+Epoch: 13, Steps: 16 | Train Loss: 0.4264868 Vali Loss: 1.3458133 Test Loss: 0.4401752
+EarlyStopping counter: 4 out of 10
+Updating learning rate to 0.006973568802000002
+Epoch: 14 cost time: 2.8063948154449463
+Epoch: 14, Steps: 16 | Train Loss: 0.4235690 Vali Loss: 1.3652475 Test Loss: 0.4449330
+EarlyStopping counter: 5 out of 10
+Updating learning rate to 0.006276211921800001
+Epoch: 15 cost time: 2.742112874984741
+Epoch: 15, Steps: 16 | Train Loss: 0.4223784 Vali Loss: 1.3633764 Test Loss: 0.4432758
+EarlyStopping counter: 6 out of 10
+Updating learning rate to 0.005648590729620003
+Epoch: 16 cost time: 2.7666754722595215
+Epoch: 16, Steps: 16 | Train Loss: 0.4202735 Vali Loss: 1.3562226 Test Loss: 0.4477712
+EarlyStopping counter: 7 out of 10
+Updating learning rate to 0.005083731656658002
+Epoch: 17 cost time: 2.7595717906951904
+Epoch: 17, Steps: 16 | Train Loss: 0.4177755 Vali Loss: 1.3795707 Test Loss: 0.4391167
+EarlyStopping counter: 8 out of 10
+Updating learning rate to 0.004575358490992202
+Epoch: 18 cost time: 2.7328219413757324
+Epoch: 18, Steps: 16 | Train Loss: 0.4158679 Vali Loss: 1.3616472 Test Loss: 0.4509138
+EarlyStopping counter: 9 out of 10
+Updating learning rate to 0.004117822641892982
+Epoch: 19 cost time: 2.7175700664520264
+Epoch: 19, Steps: 16 | Train Loss: 0.4139573 Vali Loss: 1.3470969 Test Loss: 0.4428516
+EarlyStopping counter: 10 out of 10
+Early stopping
+>>>>>>>testing : ETTh1/ETTh1_96_336_DiPaF_P16_S8_ep100_D512_ebtimeF_dtTrue_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 2545
+mse:0.4330075979232788, mae:0.43547576665878296, rse:0.6395842432975769
