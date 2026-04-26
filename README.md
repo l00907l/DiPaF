@@ -1,6 +1,6 @@
-# DiPaF: Bridging Local Dynamics and Global Patterns for Multivariate Time Series Forecasting
+# LSPP: Injecting Local Structural Patterns into Time Series Forecasting via Adaptive Prototype Pool
 
-**DiPaF** is a discrete pattern-aware forecasting framework that reformulates time series forecasting as a joint discrete-continuous learning process. Rather than directly regressing future values from historical inputs, DiPaF first infers discrete structural patterns as high-level priors to explicitly guide continuous value generation, effectively bridging fine-grained local dynamics with reusable global patterns.
+**LSPP** is a discrete pattern-aware forecasting framework that reformulates time series forecasting as a joint discrete-continuous learning process. Rather than directly regressing future values from historical inputs, DiPaF first infers discrete structural patterns as high-level priors to explicitly guide continuous value generation, effectively bridging fine-grained local dynamics with reusable global patterns.
 
 ---
 
