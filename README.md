@@ -1,14 +1,6 @@
 # LSPP: Injecting Local Structural Patterns into Time Series Forecasting via Adaptive Prototype Pool
 
-**LSPP** is a discrete pattern-aware forecasting framework that reformulates time series forecasting as a joint discrete-continuous learning process. Rather than directly regressing future values from historical inputs, DiPaF first infers discrete structural patterns as high-level priors to explicitly guide continuous value generation, effectively bridging fine-grained local dynamics with reusable global patterns.
-
----
-
-## Key Features
-
-- **Discrete-Continuous Dual Optimization**: Jointly optimizes a predictive semantic alignment loss (Cross-Entropy) and a numerical regression loss (MSE), ensuring forecasts are both structurally coherent and numerically accurate.
-- **Shared Learnable Prototype Bank**: A self-supervised pre-trained prototype bank abstracts recurring temporal motifs across all channels into a unified discrete semantic space, enabling lightweight cross-variable structural alignment.
-- **Pattern-guided Refinement**: Retrieved discrete structural anchors are fused with continuous latent representations to refine future predictions, alleviating over-smoothing in challenging scenarios.
+We propose the Local Structural Prototype Pool (LSPP), which injects local structural patterns into forecasting via an adaptive prototype pool, reformulating prediction as a discrete-continuous representation learning process.
 
 ---
 
@@ -28,11 +20,11 @@ Download all datasets from [Autoformer](https://drive.google.com/drive/folders/1
 
 ## 🏋️ Training
 
-DiPaF adopts a **two-stage training pipeline**:
+LSPP adopts a **two-stage training pipeline**:
 
-### Stage Ⅰ: Prototype Bank Pre-training
+### Stage Ⅰ: Prototype Pool Pre-training
 
-Self-supervised pre-training to initialize the encoder, decoder, and prototype bank by abstracting recurring temporal motifs into a compact discrete structural vocabulary.
+Self-supervised pre-training to initialize the encoder, decoder, and prototype pool by capturing local structural patterns into a prototype pool.
 
 All scripts are in `./scripts/VQVAE/`. Reconstruction results can be found in `./vqvae_recon_results/`, and the trained weights are saved in `/ckpt_vqvae`.
 
@@ -41,14 +33,14 @@ For example, to run the pre-training on the `weather` dataset, execute:
 sh ./scripts/VQVAE/weather.sh
 ```
 
-### Stage Ⅱ: Discrete Pattern-aware Forecasting
+### Stage Ⅱ: Pattern-aware Forecasting
 
-After obtaining the prototype bank, you can train the DiPaF forecasting model.
+After obtaining the prototype bank, you can train the LSPP forecasting model.
 
-All scripts are in `./scripts/DiPaF/`. Forecasting results are saved in `./result.txt`, and training logs are available in `./logs/`.
+All scripts are in `./scripts/LSPP/`. Forecasting results are saved in `./result.txt`, and training logs are available in `./logs/`.
 To get the multivariate forecasting results for the weather dataset, run:
 ```bash
-sh ./scripts/DiPaF/weather.sh
+sh ./scripts/LSPP/weather.sh
 ```
 
 ---
