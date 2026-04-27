@@ -37,10 +37,10 @@ sh ./scripts/VQVAE/weather.sh
 
 After obtaining the prototype bank, you can train the LSPP forecasting model.
 
-All scripts are in `./scripts/LSPP/`. Forecasting results are saved in `./result.txt`, and training logs are available in `./logs/`.
+All scripts are in `./scripts/DiPaF/`. Forecasting results are saved in `./result.txt`, and training logs are available in `./logs/`.
 To get the multivariate forecasting results for the weather dataset, run:
 ```bash
-sh ./scripts/LSPP/weather.sh
+sh ./scripts/DiPaF/weather.sh
 ```
 
 ---
